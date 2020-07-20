@@ -1,3 +1,11 @@
+// Stop arrow keys from scrolling the page
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 const sectors = 12;
 const rings = 6; // 4 + 2 for center
 const radius = 100;
